@@ -1,0 +1,4 @@
+SELECT marka, model from samochody WHERE kolor="czerwony";
+UPDATE samochody SET stan="dobry" WHERE rocznik=2003;
+CREATE USER andrzej IDENTIFIED BY "andrzej1@";
+GRANT UPDATE,SELECT ON samochody TO andrzej;

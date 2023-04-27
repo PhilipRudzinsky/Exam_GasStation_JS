@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacja paliw</title>
+    <link rel="stylesheet" href="styl3.css">
+</head>
+<body>
+    <div id="banerlewy"><h1>Stacja Paliw</h1></div>
+    <div id="banerprawy">
+        <a href="stacja.html"><img src="home.png" alt=""></a>
+        <a href="obliczenia.html"><img src="znak.png" alt=""></a>
+    </div>
+    <div id="glowny">
+        <h3>Oblicz koszt paliwa</h3>
+        <form action="">
+            <label for="nb1">Rodzaj paliwa (1-benzyna, 2-olej napędowy)</label><br>
+            <input type="number" name="" id="nb1"><br>
+            <label for="nb2">Ile litrów</label><br>
+            <input type="number" name="" id="nb2"><br>
+            <input type="button" value="Oblicz" onclick="obliczenia()"><br>
+        </form>
+    </div>
+    <div id="bloklewy"><a href="kwedendy.txt">Pobierz kwerendy</a></div>
+    <div id="blokprawy"><img src="samochod.png" alt="samochód"></div>
+    <div id="footer"><p>Stronę opracował: Filip Rudziński</p></div>
+
+    <script>
+        function obliczenia()
+        {
+        
+        let a=Number(document.getElementById("nb1").value);
+        let b=Number(document.getElementById("nb2").value);
+        let cena;
+        if(a==1)
+        {
+            cena=4;
+        }
+        else if(a==2)
+        {
+            cena=3.5;
+        }
+        else cena==0;
+        let c=Number(cena*b);
+        document.getElementById("label").innerHTML="koszt paliwa: "+c+"zł";
+        }
+    </script>
+</body>
+</html>
